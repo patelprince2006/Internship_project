@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="#" class="logo">
+          <img src="img/logo.png" alt="Netflix" />
+        </a>
+        <nav class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#tv-shows">TV Shows</a>
+          <a href="#movies">Movies</a>
+          <a href="profile.html" id="profile-link" class="hidden">Profile</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="search-button" class="icon-button" aria-label="Search">🔍</button>
+          <div class="search-wrapper hidden" id="search-wrapper">
+            <input id="search-input" class="search-input" type="search" placeholder="Search titles..." aria-label="Search titles" />
+          </div>
+          <button id="signin-button" class="btn btn-signin">Sign In</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <h1>See what's next</h1>
+          <p>Watch anywhere. Cancel anytime.</p>
+          <a href="#tv-shows" class="btn btn-primary hero-cta">Watch free for 30 days</a>
+        </div>
+      </section>
+
+      <section class="feature-section">
+        <div class="container section-header">
+          <h2>Why choose Netflix?</h2>
+          <p>Experience the Netflix landing page flow.</p>
+        </div>
+        <div class="container feature-grid">
+          <article class="feature-card">
+            <img src="img/tab-content-2-1.png" alt="Watch on TV" />
+            <h3>Watch on your TV</h3>
+            <p>Enjoy Netflix on smart TVs, game consoles, and streaming devices.</p>
+          </article>
+          <article class="feature-card">
+            <img src="img/tab-content-2-2.png" alt="Download and watch later" />
+            <h3>Download and watch later</h3>
+            <p>Save your favorites and watch offline whenever you like.</p>
+          </article>
+          <article class="feature-card">
+            <img src="img/tab-content-2-3.png" alt="Browse anywhere" />
+            <h3>Browse anywhere</h3>
+            <p>Stream from your phone, tablet, laptop, or any compatible device.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="trending-section" id="tv-shows">
+        <div class="container section-header">
+          <h2>Trending Now</h2>
+          <p>Tap a ranked title to open its watch page and start streaming.</p>
+        </div>
+        <div class="container cards-grid" id="trending-cards"></div>
+      </section>
+
+      <section class="pricing-section" id="movies">
+        <div class="container section-header">
+          <h2>Plans that fit your needs</h2>
+          <p>Pick a plan and enjoy unlimited movies and TV shows.</p>
+        </div>
+        <div class="container pricing-grid">
+          <article class="pricing-card">
+            <h3>Basic</h3>
+            <p class="price">$8.99</p>
+            <ul>
+              <li>SD quality</li>
+              <li>Watch on 1 screen</li>
+              <li>Cancel anytime</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Choose Basic</a>
+          </article>
+          <article class="pricing-card featured">
+            <span class="badge">Popular</span>
+            <h3>Standard</h3>
+            <p class="price">$12.99</p>
+            <ul>
+              <li>HD available</li>
+              <li>Watch on 2 screens</li>
+              <li>Cancel anytime</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Choose Standard</a>
+          </article>
+          <article class="pricing-card">
+            <h3>Premium</h3>
+            <p class="price">$15.99</p>
+            <ul>
+              <li>Ultra HD available</li>
+              <li>Watch on 4 screens</li>
+              <li>Cancel anytime</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Choose Premium</a>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Netflix Clone</h3>
+          <p>Frontend-only Netflix landing page example built with static UI and client-side rendering.</p>
+        </div>
+        <nav class="footer-links">
+          <a href="#">FAQ</a>
+          <a href="#">Help Center</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy</a>
+          <a href="#">Cookie Preferences</a>
+          <a href="#">Corporate Information</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div class="modal hidden" id="signin-modal">
+      <div class="modal-card">
+        <button class="modal-close" id="close-modal" aria-label="Close sign in form">×</button>
+        <h2>Sign In</h2>
+        <p>Enter your email and password to sign in.</p>
+        <form id="signin-form">
+          <label for="signin-email">Email</label>
+          <input type="email" id="signin-email" required placeholder="you@example.com" />
+          <label for="signin-password">Password</label>
+          <input type="password" id="signin-password" required placeholder="Password" />
+          <button type="submit" class="btn btn-primary">Sign In</button>
+          <p class="signin-status" id="signin-status"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

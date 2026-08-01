@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Watch</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" alt="Netflix" />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#tv-shows">TV Shows</a>
+          <a href="index.html#movies">Movies</a>
+          <a href="profile.html" id="profile-link" class="hidden">Profile</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="signin-button" class="btn btn-signin">Sign In</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="subpage-main">
+      <section class="page-hero watch-hero">
+        <div class="container page-hero-content">
+          <p class="page-kicker" id="watch-category">Featured Title</p>
+          <h1 id="watch-title">Now Streaming</h1>
+          <p id="watch-description">Open a title from Popular on Netflix to watch it here with full player controls.</p>
+        </div>
+      </section>
+
+      <section class="watch-section">
+        <div class="container watch-layout">
+          <article class="watch-player-card">
+            <div class="watch-player-top">
+              <div class="watch-branding">
+                <img class="watch-logo" src="img/logo.png" alt="Netflix" />
+                <div class="watch-profile-chip">
+                  <span id="watch-profile-avatar" class="watch-profile-avatar yellow">A</span>
+                  <div class="watch-profile-copy">
+                    <p>Watching as</p>
+                    <strong id="watch-profile-name">Aisha</strong>
+                  </div>
+                </div>
+              </div>
+              <button id="hero-play-button" class="btn btn-secondary" type="button">Play</button>
+            </div>
+
+            <div class="watch-stage">
+              <video
+                id="featured-video"
+                class="featured-video"
+                preload="metadata"
+                playsinline
+                poster="img/background.jpg"
+              >
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+              </video>
+              <button id="video-overlay-button" class="video-overlay-button" type="button" aria-label="Play video">Play</button>
+            </div>
+
+            <div class="watch-controls">
+              <input id="video-progress" class="video-progress" type="range" min="0" max="100" value="0" aria-label="Video progress" />
+              <div class="watch-controls-row">
+                <div class="watch-actions">
+                  <button id="play-toggle" class="icon-button control-pill" type="button" aria-label="Play or pause">Play</button>
+                  <button id="rewind-button" class="icon-button control-pill" type="button" aria-label="Rewind 10 seconds">Back 10</button>
+                  <button id="mute-button" class="icon-button control-pill" type="button" aria-label="Mute or unmute">Mute</button>
+                  <button id="fullscreen-button" class="icon-button control-pill" type="button" aria-label="Open fullscreen">Full</button>
+                </div>
+                <div class="watch-time">
+                  <span id="current-time">0:00</span>
+                  <span>/</span>
+                  <span id="duration-time">0:00</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <aside class="watch-side-panel">
+            <h2>Up Next</h2>
+            <p>Switch between featured titles from the Popular on Netflix row.</p>
+            <div class="watch-list" id="watch-list"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal hidden" id="signin-modal">
+      <div class="modal-card">
+        <button class="modal-close" id="close-modal" aria-label="Close sign in form">x</button>
+        <h2>Sign In</h2>
+        <p>Enter your email and password to sign in.</p>
+        <form id="signin-form">
+          <label for="signin-email">Email</label>
+          <input type="email" id="signin-email" required placeholder="you@example.com" />
+          <label for="signin-password">Password</label>
+          <input type="password" id="signin-password" required placeholder="Password" />
+          <button type="submit" class="btn btn-primary">Sign In</button>
+          <p class="signin-status" id="signin-status"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
