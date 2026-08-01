@@ -268,29 +268,17 @@ function closeModal() {
 function handleSignin(event) {
   event.preventDefault();
 
-  const emailField = document.getElementById("signin-email");
-  const passwordField = document.getElementById("signin-password");
-  const email = emailField ? emailField.value.trim() : "";
-  const password = passwordField ? passwordField.value.trim() : "";
-
-  if (!email || !password) {
-    if (signinStatus) {
-      signinStatus.textContent = "Please enter both email and password.";
-    }
-    return;
-  }
-
   setSigninState(true);
   syncAuthUi();
 
   if (signinStatus) {
-    signinStatus.textContent = "Signed in successfully!";
+    signinStatus.textContent = "Entering Demo Mode...";
   }
 
   setTimeout(() => {
     closeModal();
     window.location.href = "profile.html";
-  }, 700);
+  }, 400);
 }
 
 function handleProfileClick(event) {
