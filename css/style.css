@@ -89,6 +89,29 @@ input {
   height: 45px;
 }
 
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--red);
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  line-height: 1;
+}
+
+.logo-badge {
+  font-size: 0.65rem;
+  background: var(--red);
+  color: #ffffff;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+
 .nav-links {
   display: flex;
   gap: 1.75rem;
